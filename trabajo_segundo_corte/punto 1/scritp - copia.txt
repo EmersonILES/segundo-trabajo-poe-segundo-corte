@@ -1,0 +1,25 @@
+function contarPalabrasUnicas() {
+  // Obtener el texto ingresado por el usuario
+  const paragraph = document.getElementById("paragraph").value;
+
+  // Convertir el texto a minúsculas y dividirlo en palabras
+  const palabras = paragraph.toLowerCase().split(/\s+/);
+
+  // Crear un objeto para almacenar palabras únicas
+  const palabrasUnicas = {};
+
+  // Recorrer cada palabra y agregarla al objeto si no existe
+  palabras.forEach((palabra) => {
+    if (!palabrasUnicas[palabra]) {
+      palabrasUnicas[palabra] = true;
+    }
+  });
+
+  // Contar la cantidad de palabras únicas
+  const cantidadPalabrasUnicas = Object.keys(palabrasUnicas).length;
+
+  // Mostrar el resultado en el html
+  const resultado = document.getElementById("result");
+  resultado.textContent =
+    "Número de palabras únicas: " + cantidadPalabrasUnicas;
+}

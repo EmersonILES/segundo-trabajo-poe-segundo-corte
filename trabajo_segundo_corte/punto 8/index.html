@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Fruta</title>
+</head>
+<body>
+    <h1>Verificar Fruta</h1>
+    <label for="fruta">Ingrese una fruta:</label>
+    <input type="text" id="fruta">
+    <br>
+    <button onclick="verificarFruta()">Verificar fruta</button>
+    <p id="resultado"></p>
+
+    <script>
+        // Creamos un array de nombres de  lasfrutas
+        const frutas = ["manzana", "banana", "naranja", "pera", "uva"];
+
+        function verificarFruta() {
+            // Obtenemso  la fruta ingresada por el usuario para la comprovacion
+            const frutaIngresada = document.getElementById("fruta").value.toLowerCase();
+
+            // Verificar si la fruta está en el array
+            if (frutas.includes(frutaIngresada)) {
+                document.getElementById("resultado").textContent = "La fruta está en la lista.";
+            } else {
+                document.getElementById("resultado").textContent = "La fruta no está en la lista.";
+            }
+        }
+    </script>
+     <H1> AUTOR EMERSON ESNEYDER ILES SAMBONY</H1>
+</body>
+</html>

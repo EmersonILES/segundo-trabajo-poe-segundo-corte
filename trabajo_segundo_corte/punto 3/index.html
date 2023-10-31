@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Anagramas</title>
+</head>
+<body>
+    <h1>Verificacion de Anagramas</h1>
+    <a for="primeracadena">Ingrese la primera cadena:</a>
+    <input type="text" id="primeracadena">
+    <br>
+    <a for="segundacadena">Ingrese la segunda cadena:</a>
+    <input type="text" id="segundacadena">
+    <br>
+    <button onclick="verificarAnagrama()">Verificar Anagrama</button>
+    <p id="resultado"></p>
+
+    <script>
+        function verificarAnagrama() {
+            // Obtener las cadenas ingresadas por el usuario
+            const cadena1 = document.getElementById("primeracadena").value.toLowerCase();
+            const cadena2 = document.getElementById("segundacadena").value.toLowerCase();
+
+            // Convertir las cadenas a arreglos de caracteres, ordenarlas y volver a unirlas
+            const sortedCadena1 = cadena1.split('').sort().join('');
+            const sortedCadena2 = cadena2.split('').sort().join('');
+
+            // Verificar si las cadenas ordenadas son iguales
+            if (sortedCadena1 === sortedCadena2) {
+                document.getElementById("resultado").textContent = "¡Son anagramas!";
+            } else {
+                document.getElementById("resultado").textContent = "No son anagramas.";
+            }
+        }
+    </script>
+     <H1> AUTOR EMERSON ESNEYDER ILES SAMBONY</H1>
+</body>
+</html>

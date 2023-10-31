@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayúsculas y Minúsculas</title>
+</head>
+<body>
+    <h1>Mayúsculas y Minúsculas</h1>
+    <label for="cadena">Ingrese una cadena:</label>
+    <input type="text" id="cadena">
+    <br>
+    <button onclick="convertirMayusculasMinisculas()">Convertir</button>
+    <p id="resultadoMayusculas"></p>
+    <p id="resultadoMinusculas"></p>
+
+    <script>
+        function convertirMayusculasMinisculas() {
+            // Obtenemos  la cadena ingresada por el usuario
+            const cadena = document.getElementById("cadena").value;
+
+            // Convertimos la cadena a mayúsculas y minúsculas respectivamente
+            const cadenaMayusculas = cadena.toUpperCase();
+            const cadenaMinusculas = cadena.toLowerCase();
+
+            // Mostraremso  los resultados en la página por medio del html
+            document.getElementById("resultadoMayusculas").textContent = "Mayúsculas: " + cadenaMayusculas;
+            document.getElementById("resultadoMinusculas").textContent = "Minúsculas: " + cadenaMinusculas;
+        }
+    </script>
+     <H1> AUTOR EMERSON ESNEYDER ILES SAMBONY</H1>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda en una cadena</title>
+</head>
+<body>
+    <h1>Búsqueda  con plabras claves</h1>
+    <label for="cadena">Ingrese una cadena de texto:</label>
+    <input type="text" id="cadena">
+    <br>
+    <label for="clave">Ingrese la palabra clave</label>
+    <input type="text" id="clave">
+    <br>
+    <button onclick="buscarPalabraClave()">Buscar palabra clave</button>
+    <p id="resultado"></p>
+
+    <script>
+        function buscarPalabraClave() {
+            // Obtener la cadena de texto y la palabra clave ingresadas por el usuario
+            const cadena = document.getElementById("cadena").value;
+            const clave = document.getElementById("clave").value;
+
+            // Realizar la búsqueda de la palabra clave en la cadena
+            if (cadena.includes(clave)) {
+                document.getElementById("resultado").textContent = "La palabra clave aparece en la cadena.";
+            } else {
+                document.getElementById("resultado").textContent = "La palabra clave no aparece en la cadena.";
+            }
+        }
+    </script>
+     <H1> AUTOR EMERSON ESNEYDER ILES SAMBONY</H1>
+</body>
+</html>

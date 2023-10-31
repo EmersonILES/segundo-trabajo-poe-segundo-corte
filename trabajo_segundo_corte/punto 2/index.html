@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Contraseña</title>
+</head>
+<body>
+    <h1>Validación de Contraseña</h1>
+    <h1> la contraseña va a contener  los sigientes requizitos  </h1>
+    <p> debe contener al  menos 8 caracteres, contener al menos una letra mayúscula y un número, y no contener espacios en blanco.</p>
+    <label for="password">Ingrese una contraseña:</label>
+    <input type="password" id="password">
+    <button onclick="validarContraseña()">Validar contraseña</button>
+    <p id="resultado"></p>
+
+    <script>
+        function validarContraseña() {
+            // Obtener la contraseña ingresada por el usuario
+            const contraseña = document.getElementById("password").value;
+
+            // Verificar si la contraseña cumple con los criterios
+            const cumpleLongitud = contraseña.length >= 8;
+            const cumpleMayuscula = /[A-Z]/.test(contraseña);
+            const cumpleNumero = /\d/.test(contraseña);
+            const noContieneEspacios = !/\s/.test(contraseña);
+            
+
+            // Comprobar todos los criterios
+            if (cumpleLongitud && cumpleMayuscula && cumpleNumero && noContieneEspacios) {
+                document.getElementById("resultado").textContent = "La contraseña es válida.";
+            } else {
+                document.getElementById("resultado").textContent = "La contraseña no cumple con los criterios.";
+            }
+        }
+    </script>
+     <H1> AUTOR EMERSON ESNEYDER ILES SAMBONY</H1>
+</body>
+</html>

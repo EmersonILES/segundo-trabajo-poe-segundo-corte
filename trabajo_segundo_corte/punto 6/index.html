@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Palabras</title>
+</head>
+<body>
+    <h1>Contador de Palabras</h1>
+    <label for="frase">Ingrese una oracion:</label>
+    <input type="text" id="frase">
+    <br>
+    <button onclick="contarPalabras()">Contar palabras</button>
+    <p id="resultado"></p>
+
+    <script>
+        function contarPalabras() {
+            //Obtener la frase ingresada por el usuario
+            const frase = document.getElementById("frase").value;
+
+            //Dividir la frase en palabras usando espacios como separadores
+            const palabras = frase.split(' ');
+
+            //Contar la cantidad de palabras
+            const cantidadPalabras = palabras.length;
+
+            //Mostrar el resultado en la página
+            document.getElementById("resultado").textContent = "Número de palabras: " + cantidadPalabras;
+        }
+    </script>
+     <H1> AUTOR EMERSON ESNEYDER ILES SAMBONY</H1>
+</body>
+</html>

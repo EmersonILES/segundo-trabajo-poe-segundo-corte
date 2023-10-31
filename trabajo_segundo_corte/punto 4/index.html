@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reemplazar Vocales</title>
+</head>
+<body>
+    <h1>Reemplazamos Vocales</h1>
+    <label for="cadenadetexto">Ingrese la cadena cadena:</label>
+    <input type="text" id="cadenadetexto">
+    <br>
+    <label for="caracterremplpazador">Carácter que remplazara a las vocales:</label>
+    <input type="text" id="caracterremplpazador">
+    <br>
+    <button onclick="reemplazarVocales()">Reemplazo de vocales</button>
+    <p id="resultado"></p>
+
+    <script>
+        function reemplazarVocales() {
+            // Obtener la cadena ingresada por el usuario y el carácter de reemplazo
+            const cadena = document.getElementById("cadenadetexto").value;
+            const caracterReemplazo = document.getElementById("caracterremplpazador").value;
+
+            // Usar expresión regular para buscar y reemplazar todas las vocales
+            const nuevaCadena = cadena.replace(/[aeiouAEIOU]/g, caracterReemplazo);
+
+            // Mostrar el resultado en la página
+            document.getElementById("resultado").textContent = "Resultado: " + nuevaCadena;
+        }
+    </script>
+     <H1> AUTOR EMERSON ESNEYDER ILES SAMBONY</H1>
+</body>
+</html>

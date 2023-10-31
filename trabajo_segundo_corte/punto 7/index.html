@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inversión de Cadena</title>
+</head>
+<body>
+    <h1>Inversión de Cadena</h1>
+    <label for="cadena">Ingrese una cadena de texto:</label>
+    <input type="text" id="cadena">
+    <br>
+    <button onclick="invertirCadena()">Invertir cadena</button>
+    <p id="resultado"></p>
+
+    <script>
+        function invertirCadena() {
+            // Obtener la cadena ingresada por el usuario
+            const cadena = document.getElementById("cadena").value;
+
+            // Llamamos  la función para invertir la cadena luego obtenemos el resultado
+            const cadenaInvertida = invertirTexto(cadena);
+
+            // Mostramos el resultado por medio del html
+            document.getElementById("resultado").textContent = "Cadena invertida: " + cadenaInvertida;
+        }
+
+        function invertirTexto(texto) {
+            // Usamos el método split() para dividir la cadena en caracteres, luego reverse() para invertir y join() para unir nuevamente
+            return texto.split('').reverse().join('');
+        }
+    </script>
+     <H1> AUTOR EMERSON ESNEYDER ILES SAMBONY</H1>
+</body>
+</html>

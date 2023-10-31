@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longitud de las Palabras</title>
+</head>
+<body>
+    <h1>Longitud de las  Palabras</h1>
+    <label for="oracion">Ingrese una oración:</label>
+    <input type="text" id="oracion">
+    <br>
+    <button onclick="mostrarLongitudPalabras()">Mostrar Longitud de la oracion/button>
+    <p id="resultado"></p>
+
+    <script>
+        function mostrarLongitudPalabras() {
+            // Obtiene la oración ingresada por el usuario en el html
+            const oracion = document.getElementById("oracion").value;
+
+            // Dividir la oración en palabras usando espacios como separadores
+            const palabras = oracion.split(' ');
+
+            // Crear un arreglo para almacenar la longitud de cada palabra
+            const longitudPalabras = [];
+
+            // Calcular la longitud de cada palabra y almacenarla en el arreglo
+            for (const palabra of palabras) {
+                longitudPalabras.push(palabra.length);
+            }
+
+            // Mostrar el resultado en la página
+            document.getElementById("resultado").textContent = "Longitud de palabras: " + longitudPalabras.join(', ');
+        }
+    </script>
+     <H1> AUTOR EMERSON ESNEYDER ILES SAMBONY</H1>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duplicar Elementos en un Array</title>
+</head>
+<body>
+    <h1>Duplicar Elementos en un Array</h1>
+    <button onclick="duplicarArray()">Duplicar</button>
+    <p id="original"></p>
+    <p id="resultado"></p>
+
+    <script>
+        function duplicarArray() {
+            // Array de números enteros
+            const numeros = [1, 2, 3, 4, 5];
+            
+
+            // Utilizamos la función map para duplicar cada elemento
+            const numerosDuplicados = numeros.map(function(numero) {
+                return numero * 1;
+            });
+
+            // Mostrar el array resultante en la página
+            document.getElementById("resultado").textContent = "Array duplicado: " + numerosDuplicados.join(', ');
+            document.getElementById("original").textContent="array original   " +  numeros.join(",")
+        }
+    </script>
+     <H1> AUTOR EMERSON ESNEYDER ILES SAMBONY</H1>
+     
+</body>
+</html>

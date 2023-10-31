@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> comvertir mayúsculas a minúsculas y viceversa</title>
+</head>
+<body>
+    <h1>mayúsculas a minúsculas y viceversa</h1>
+    <button onclick="convertirPalabras()">Convertir</button>
+    <p id="resultado"></p>
+
+    <script>
+        function convertirPalabras() {
+            // array de palabras
+            const palabras = ["Hola", "profe", "este", "TRABAJO","FUE","DESARROLLADO","POR","EMERSON","ESNEYDER","ILES","SAMBONY"];
+
+            // se Utilizo la función map para convertir mayúsculas a minúsculas y viceversa
+            const palabrasModificadas = palabras.map(function(palabra) {
+                return intercambiarMayusculasMinisculas(palabra);
+            });
+
+            //  ahora Mostramos la lista de palabras modificadas en la página por medio de html
+            document.getElementById("resultado").textContent = "Palabras modificadas: " + palabrasModificadas.join(', ');
+        }
+
+        function intercambiarMayusculasMinisculas(palabra) {
+            // Utilizar un bucle for para recorrer la palabra y cambiar mayúsculas a minúsculas y viceversa
+            let resultado = '';
+            for (let i = 0; i < palabra.length; i++) {
+                const caracter = palabra[i];
+                if (caracter === caracter.toUpperCase()) {
+                    resultado += caracter.toLowerCase();
+                } else {
+                    resultado += caracter.toUpperCase();
+                }
+            }
+            return resultado;
+        }
+    </script>
+    <H1> AUTOR EMERSON ESNEYDER ILES SAMBONY</H1>
+</body>
+</html>
